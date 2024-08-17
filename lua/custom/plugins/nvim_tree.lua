@@ -1,7 +1,8 @@
 local map = vim.keymap.set
 
 -- Global tree toggle mapping
-map('n', '<C-n>', '<Cmd>NvimTreeToggle<CR>', { desc = 'Toggle Nvim-Tree' })
+map('n', '<C-n>', '<Cmd>NvimTreeFocus<CR>', { desc = 'Focus Nvim-Tree' })
+map('n', '<CA-n>', '<Cmd>NvimTreeFindFile<CR>', { desc = 'Find File in Tree' })
 
 local function tree_attach(bufnr)
   local api = require 'nvim-tree.api'
@@ -28,6 +29,11 @@ local function tree_attach(bufnr)
   map('n', 'a', close_wrap(api.fs.create), opts 'Create')
   map('n', 'd', close_wrap(api.fs.remove), opts 'Delete')
   map('n', 'r', close_wrap(api.fs.rename), opts 'Rename')
+end
+
+local function open_nvim_tree()
+  -- open the tree
+  require('nvim-tree.api').tree.open()
 end
 
 return {
@@ -62,7 +68,7 @@ return {
       -- default
       opts = {
         -- Whether the float preview is enabled by default. When set to false, it has to be "toggled" on.
-        toggled_on = true,
+        toggled_on = false,
         -- wrap nvimtree commands
         wrap_nvimtree_commands = true,
         -- lines for scroll
@@ -78,7 +84,7 @@ return {
           -- scroll down float buffer
           down = { '<C-d>' },
           -- scroll up float buffer
-          up = { '<C-e>', '<C-u>' },
+          up = { '<C-e>', '<C-g>' },
           -- enable/disable float windows
           toggle = { '<C-x>' },
         },
@@ -109,10 +115,10 @@ return {
         group_empty = true,
       },
       filters = {
-        dotfiles = true,
+        dotfiles = false,
       },
       on_attach = tree_attach,
     }
-    -- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+    vim.api.nvim_create_autocmd({ 'VimEnter' }, { callback = open_nvim_tree })
   end,
 }
