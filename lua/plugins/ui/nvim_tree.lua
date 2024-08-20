@@ -28,6 +28,7 @@ local function tree_attach(bufnr)
   map('n', 'O', close_wrap(api.node.open.no_window_picker), opts 'Open: No Window Picker')
   map('n', 'a', close_wrap(api.fs.create), opts 'Create')
   map('n', 'd', close_wrap(api.fs.remove), opts 'Delete')
+  map('n', 'x', close_wrap(api.fs.cut), opts 'Cut')
   map('n', 'r', close_wrap(api.fs.rename), opts 'Rename')
 end
 
