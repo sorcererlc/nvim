@@ -7,6 +7,7 @@ local map = vim.keymap.set
 map('n', '<C-q>', '<cmd>qa<CR>', { desc = 'Quit all' })
 -- Save faster
 map('n', '<C-s>', '<cmd>w<CR>', { desc = 'Save buffer' })
+map('i', '<C-s>', '<Esc><cmd>w<CR>', { desc = 'Save buffer and exit insert mode' })
 -- Faster command mode
 map('n', ';', ':', { desc = 'CMD enter command mode' })
 -- Faster comments
