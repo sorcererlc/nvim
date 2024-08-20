@@ -1,6 +1,3 @@
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
-
 local map = vim.keymap.set
 
 -- GTFO
@@ -31,12 +28,6 @@ map('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]ui
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 map('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-
--- TIP: Disable arrow keys in normal mode
--- map('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
--- map('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
--- map('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
--- map('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 --
 --  See `:help wincmd` for a list of all window commands

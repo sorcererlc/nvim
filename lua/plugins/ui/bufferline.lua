@@ -7,6 +7,7 @@ return {
   },
   config = function()
     vim.opt.termguicolors = true
+    vim.opt.mousemoveevent = true
     require('bufferline').setup(opts)
   end,
 }
