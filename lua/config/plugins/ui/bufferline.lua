@@ -95,7 +95,7 @@ return {
         toggle_hidden_on_enter = true,
       },
     },
-    mode = 'tabs', -- set to "tabs" to only show tabpages instead
+    mode = 'buffers', -- set to "tabs" to only show tabpages instead
     numbers = 'none', -- can be "none" | "ordinal" | "buffer_id" | "both" | functions
     right_mouse_command = 'vert sbuffer %d', -- can be a string | function, see "Mouse actions"
     left_mouse_command = 'buffer %d', -- can be a string | function, see "Mouse actions"
