@@ -9,6 +9,7 @@ return {
   require 'plugins.editor.bigfile',
   require 'plugins.editor.session_manager',
   require 'plugins.editor.nvim_treesitter',
+  require 'plugins.editor.flash',
 
   -- UI
   require 'plugins.ui.themes.catppuccin',
@@ -17,8 +18,8 @@ return {
   require 'plugins.ui.nvim_colorizer',
   require 'plugins.ui.dashboard_nvim',
   require 'plugins.ui.lualine',
-  -- require 'plugins.ui.tabby',
-  require 'plugins.ui.bufferline',
+  require 'plugins.ui.tabby',
+  -- require 'plugins.ui.bufferline',
 
   -- LSP
   require 'plugins.lsp.lazydev',
