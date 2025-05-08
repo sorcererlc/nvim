@@ -116,7 +116,10 @@ return {
         group_empty = true,
       },
       filters = {
-        dotfiles = false,
+        dotfiles = true,
+      },
+      git = {
+        ignore = false,
       },
       on_attach = tree_attach,
     }
