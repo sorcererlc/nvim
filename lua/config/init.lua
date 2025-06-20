@@ -5,8 +5,8 @@ function M:init()
   Config.icons = vim.deepcopy(require 'config.icons') -- Load icons
   Config.plugins = {
     core = {
-      disabled = require 'config.plugins.core.disabled',
-      lazy = require 'config.plugins.core.lazy',
+      disabled = require 'config.plugins.disabled',
+      lazy = require 'config.plugins.lazy',
     },
   }
 end
