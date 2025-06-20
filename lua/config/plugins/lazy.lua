@@ -1,49 +1,51 @@
 return {
+  -- Completion
+  require 'plugins.completion.autopairs', -- auto insert paired characters
+  require 'plugins.completion.nvim_cmp', -- general completion plugin
+
   -- Editor
-  require 'plugins.editor.vim_sleuth',
-  require 'plugins.editor.whichkey',
-  require 'plugins.editor.mini',
-  require 'plugins.editor.todo_comments',
-  require 'plugins.editor.comment',
-  require 'plugins.editor.ts_context_commentstring',
-  require 'plugins.editor.bigfile',
-  require 'plugins.editor.session_manager',
-  require 'plugins.editor.nvim_treesitter',
-  require 'plugins.editor.flash',
-
-  -- UI
-  require 'plugins.ui.themes.catppuccin',
-  require 'plugins.ui.indent_line',
-  require 'plugins.ui.nvim_tree',
-  require 'plugins.ui.nvim_colorizer',
-  require 'plugins.ui.dashboard_nvim',
-  require 'plugins.ui.lualine',
-  require 'plugins.ui.tabby',
-  -- require 'plugins.ui.bufferline',
-
-  -- LSP
-  require 'plugins.lsp.lazydev',
-  require 'plugins.lsp.luvit_meta',
-  require 'plugins.lsp.nvim_lspconfig',
+  require 'plugins.editor.bigfile', -- disable some NeoVim features for better big file handling
+  require 'plugins.editor.comment', -- toggle comments for various languages
+  require 'plugins.editor.flash', -- navigate files with search labels
+  require 'plugins.editor.mini', -- lua modules for a better NeoVim
+  require 'plugins.editor.session_manager', -- save NeoVim sessions per directory like VS Code
+  require 'plugins.editor.sleuth', -- auto detect and set indentation style
+  require 'plugins.editor.todo_comments', -- highlight various TODO, FIXME, etc comments
+  require 'plugins.editor.treesitter', -- syntax highlighting
+  require 'plugins.editor.trouble', -- display diagnostics, references, other lists
+  require 'plugins.editor.ts_context_commentstring', -- set commentstring based on cursor position within a file
+  require 'plugins.editor.whichkey', -- show available keybinds
 
   -- Find
-  require 'plugins.find.nvim_telescope',
-
-  -- Completion
-  require 'plugins.completion.nvim_cmp',
-  require 'plugins.completion.autopairs',
+  require 'plugins.find.harpoon', -- navigate files and locations with lists
+  require 'plugins.find.nvim_telescope', -- find anything, anywhere
 
   -- Format
-  require 'plugins.format.conform',
-
-  -- Lint
-  -- require 'plugins.lint.lint',
-
-  -- VCS
-  require 'plugins.vcs.gitsigns',
-  require 'plugins.vcs.neogit',
+  require 'plugins.format.conform', -- code formatting via LSP
 
   -- Language support
-  require 'plugins.language.go',
+  require 'plugins.language.go', -- go support
   require 'plugins.language.rasi', -- Deprecated/Added to NeoVim. Remove after release.
+
+  -- Lint
+  require 'plugins.lint.lint', -- linter
+
+  -- LSP
+  require 'plugins.lsp.lazydev', -- faster LuaLS
+  require 'plugins.lsp.luvit_meta', -- Luvit framework meta type definitions
+  require 'plugins.lsp.nvim_lspconfig', -- quickstart for NeoVim LSP
+
+  -- UI
+  -- require 'plugins.ui.dashboard_nvim', -- boot dashboard
+  require 'plugins.ui.indent_line', -- indentation guides
+  require 'plugins.ui.lualine', -- status line
+  require 'plugins.ui.nvim_colorizer', -- highlights for stuff like hex color codes in CSS
+  require 'plugins.ui.nvim_tree', -- file manager tree
+  -- require 'plugins.ui.tabby', -- tabs
+  require 'plugins.ui.themes.catppuccin', -- nice colors
+
+  -- VCS
+  require 'plugins.vcs.diffview', -- diff view, conflict resolution
+  require 'plugins.vcs.gitsigns', -- live git decorations in buffers
+  require 'plugins.vcs.neogit', -- visual git
 }
