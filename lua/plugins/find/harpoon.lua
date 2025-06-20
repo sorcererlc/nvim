@@ -31,7 +31,7 @@ return {
       toggle_telescope(harpoon:list())
     end, { desc = 'Open harpoon [l]ist' })
 
-    map('n', '<leader>a', function()
+    map('n', '<leader>j', function()
       harpoon:list():add()
     end, { desc = '[A]dd to harpoon list' })
 
