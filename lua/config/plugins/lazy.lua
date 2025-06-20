@@ -27,6 +27,9 @@ return {
   require 'plugins.language.go', -- go support
   require 'plugins.language.rasi', -- Deprecated/Added to NeoVim. Remove after release.
 
+  -- LLM
+  require 'plugins.llm.avante', -- LLM helper
+
   -- Lint
   require 'plugins.lint.lint', -- linter
 
