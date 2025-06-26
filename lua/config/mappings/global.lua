@@ -49,3 +49,5 @@ map('n', '<A-m>', '<Cmd>+tabmove<CR>', { desc = 'Move tab to next' })
 map('n', '<A-c>', '<Cmd>tabclose<CR>', { desc = 'Close tab' })
 -- Close buffer
 map('n', '<A-q>', '<Cmd>bd<CR>', { desc = 'Quit' })
+
+map('n', '<leader>tr', ':Trouble<CR>', { desc = 'Open Trouble' })
