@@ -123,6 +123,6 @@ return {
       },
       on_attach = tree_attach,
     }
-    vim.api.nvim_create_autocmd({ 'VimEnter' }, { callback = open_nvim_tree })
+    -- vim.api.nvim_create_autocmd({ 'VimEnter' }, { callback = open_nvim_tree })
   end,
 }
