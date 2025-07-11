@@ -51,4 +51,5 @@ return {
   require 'plugins.vcs.diffview', -- diff view, conflict resolution
   require 'plugins.vcs.gitsigns', -- live git decorations in buffers
   require 'plugins.vcs.neogit', -- visual git
+  require 'plugins.vcs.git_blame', -- inline git blame
 }
