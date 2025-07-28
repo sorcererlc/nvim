@@ -7,7 +7,6 @@ return {
   require 'plugins.editor.bigfile', -- disable some NeoVim features for better big file handling
   require 'plugins.editor.comment', -- toggle comments for various languages
   require 'plugins.editor.flash', -- navigate files with search labels
-  require 'plugins.editor.mini', -- lua modules for a better NeoVim
   require 'plugins.editor.session_manager', -- save NeoVim sessions per directory like VS Code
   require 'plugins.editor.sleuth', -- auto detect and set indentation style
   require 'plugins.editor.todo_comments', -- highlight various TODO, FIXME, etc comments
@@ -38,12 +37,16 @@ return {
   require 'plugins.lsp.luvit_meta', -- Luvit framework meta type definitions
   require 'plugins.lsp.nvim_lspconfig', -- quickstart for NeoVim LSP
 
+  -- Misc
+  require 'plugins.misc.rest', -- REST client
+
   -- UI
   -- require 'plugins.ui.dashboard_nvim', -- boot dashboard
   require 'plugins.ui.indent_line', -- indentation guides
   require 'plugins.ui.lualine', -- status line
+  require 'plugins.ui.mini', -- lua modules for a better NeoVim
   require 'plugins.ui.nvim_colorizer', -- highlights for stuff like hex color codes in CSS
-  require 'plugins.ui.nvim_tree', -- file manager tree
+  -- require 'plugins.ui.nvim_tree', -- file manager tree
   -- require 'plugins.ui.tabby', -- tabs
   require 'plugins.ui.themes.catppuccin', -- nice colors
 
