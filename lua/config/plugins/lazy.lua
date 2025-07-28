@@ -38,7 +38,7 @@ return {
   require 'plugins.lsp.nvim_lspconfig', -- quickstart for NeoVim LSP
 
   -- Misc
-  require 'plugins.misc.rest', -- REST client
+  -- require 'plugins.misc.rest', -- REST client
 
   -- UI
   -- require 'plugins.ui.dashboard_nvim', -- boot dashboard
