@@ -46,7 +46,7 @@ return {
   require 'plugins.ui.lualine', -- status line
   require 'plugins.ui.mini', -- lua modules for a better NeoVim
   require 'plugins.ui.nvim_colorizer', -- highlights for stuff like hex color codes in CSS
-  -- require 'plugins.ui.nvim_tree', -- file manager tree
+  require 'plugins.ui.nvim_tree', -- file manager tree
   -- require 'plugins.ui.tabby', -- tabs
   require 'plugins.ui.themes.catppuccin', -- nice colors
 

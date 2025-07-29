@@ -1,6 +1,6 @@
-local map = vim.keymap.set
-
-map('n', '<C-n>', '<Cmd>lua MiniFiles.open()<CR>', { desc = 'Open mini.files' })
+-- local map = vim.keymap.set
+--
+-- map('n', '<C-n>', '<Cmd>lua MiniFiles.open()<CR>', { desc = 'Open mini.files' })
 
 return {
   'echasnovski/mini.nvim',
@@ -20,14 +20,14 @@ return {
     -- - sr)'  - [S]urround [R]eplace [)] [']
     require('mini.surround').setup()
 
-    require('mini.files').setup {
-      windows = {
-        max_number = 3,
-        width_focus = 50,
-        width_nofocus = 25,
-        preview = true,
-        width_preview = 100,
-      },
-    }
+    -- require('mini.files').setup {
+    --   windows = {
+    --     max_number = 3,
+    --     width_focus = 50,
+    --     width_nofocus = 25,
+    --     preview = true,
+    --     width_preview = 100,
+    --   },
+    -- }
   end,
 }
