@@ -1,12 +1,14 @@
 return {
   -- Completion
   require 'plugins.completion.autopairs', -- auto insert paired characters
-  require 'plugins.completion.nvim_cmp', -- general completion plugin
+  require 'plugins.completion.blink_cmp', -- general completion plugin
+  -- require 'plugins.completion.nvim_cmp', -- general completion plugin
 
   -- Editor
   require 'plugins.editor.bigfile', -- disable some NeoVim features for better big file handling
   require 'plugins.editor.comment', -- toggle comments for various languages
   require 'plugins.editor.flash', -- navigate files with search labels
+  require 'plugins.editor.orgmode', -- Emacs-like orgmode
   require 'plugins.editor.session_manager', -- save NeoVim sessions per directory like VS Code
   require 'plugins.editor.sleuth', -- auto detect and set indentation style
   require 'plugins.editor.todo_comments', -- highlight various TODO, FIXME, etc comments
