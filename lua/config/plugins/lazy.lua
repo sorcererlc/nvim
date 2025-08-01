@@ -1,4 +1,4 @@
-return {
+local plugins = {
   -- Completion
   require 'plugins.completion.autopairs', -- auto insert paired characters
   require 'plugins.completion.blink_cmp', -- general completion plugin
@@ -26,7 +26,7 @@ return {
 
   -- Language support
   require 'plugins.language.go', -- go support
-  require 'plugins.language.rasi', -- Deprecated/Added to NeoVim. Remove after release.
+  -- require 'plugins.language.rasi', -- Deprecated/Added to NeoVim. Remove after release.
 
   -- LLM
   -- require 'plugins.llm.avante', -- LLM helper
@@ -38,6 +38,9 @@ return {
   require 'plugins.lsp.lazydev', -- faster LuaLS
   require 'plugins.lsp.luvit_meta', -- Luvit framework meta type definitions
   require 'plugins.lsp.nvim_lspconfig', -- quickstart for NeoVim LSP
+
+  -- Editor
+  require 'plugins.editor.tiny-inline-diagnostic', -- clean inline diagnostics
 
   -- Misc
   -- require 'plugins.misc.rest', -- REST client
@@ -58,3 +61,9 @@ return {
   require 'plugins.vcs.neogit', -- visual git
   require 'plugins.vcs.git_blame', -- inline git blame
 }
+
+-- for _, v in ipairs(Config.plugins.env.load) do
+--   table.insert(plugins, v)
+-- end
+
+return plugins

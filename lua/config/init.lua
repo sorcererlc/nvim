@@ -8,6 +8,7 @@ function M:init()
       disabled = require 'config.plugins.disabled',
       lazy = require 'config.plugins.lazy',
     },
+    env = require 'config.env',
   }
 end
 
