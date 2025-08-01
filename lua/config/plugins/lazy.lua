@@ -8,6 +8,7 @@ local plugins = {
   require 'plugins.editor.bigfile', -- disable some NeoVim features for better big file handling
   require 'plugins.editor.comment', -- toggle comments for various languages
   require 'plugins.editor.flash', -- navigate files with search labels
+  require 'plugins.editor.render-markdown', -- live preview for various files like markdown
   require 'plugins.editor.orgmode', -- Emacs-like orgmode
   require 'plugins.editor.session_manager', -- save NeoVim sessions per directory like VS Code
   require 'plugins.editor.sleuth', -- auto detect and set indentation style
