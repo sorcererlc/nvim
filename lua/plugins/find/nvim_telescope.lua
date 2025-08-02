@@ -21,13 +21,13 @@ return { -- Fuzzy Finder (files, lsp, etc)
 
     -- Useful for getting pretty icons, but requires a Nerd Font.
     { 'nvim-tree/nvim-web-devicons', enabled = Config.enviroment.use_icons },
-    {
-      'nvim-telescope/telescope-project.nvim',
-      build = 'make',
-      cond = function()
-        return vim.fn.executable 'make' == 1
-      end,
-    },
+    -- {
+    --   'nvim-telescope/telescope-project.nvim',
+    --   build = 'make',
+    --   cond = function()
+    --     return vim.fn.executable 'make' == 1
+    --   end,
+    -- },
     -- {
     --   'nvim-telescope/telescope-file-browser.nvim',
     --   build = 'make',
@@ -37,27 +37,27 @@ return { -- Fuzzy Finder (files, lsp, etc)
     -- },
   },
   config = function()
-    local project_actions = require 'telescope._extensions.project.actions'
+    -- local project_actions = require 'telescope._extensions.project.actions'
     require('telescope').setup {
       extensions = {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
         },
-        project = {
-          sync_with_nvim_tree = true,
-          hidden_files = true,
-          order_by = 'asc',
-          on_project_selected = function(prompnt_bufnr)
-            project_actions.change_working_directory(prompnt_bufnr)
-          end,
-        },
+        -- project = {
+        --   sync_with_nvim_tree = true,
+        --   hidden_files = true,
+        --   order_by = 'asc',
+        --   on_project_selected = function(prompnt_bufnr)
+        --     project_actions.change_working_directory(prompnt_bufnr)
+        --   end,
+        -- },
       },
     }
 
     -- Enable Telescope extensions if they are installed
     pcall(require('telescope').load_extension, 'fzf')
     pcall(require('telescope').load_extension, 'ui-select')
-    pcall(require('telescope').load_extension, 'project')
+    -- pcall(require('telescope').load_extension, 'project')
     -- pcall(require('telescope').load_extension, 'file_browser')
 
     -- See `:help telescope.builtin`
@@ -72,7 +72,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
     vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
     vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
-    vim.keymap.set('n', '<leader>cw', ':lua require"telescope".extensions.project.project{}<CR>', { desc = '[C]hange [W]workspace' })
+    -- vim.keymap.set('n', '<leader>cw', ':lua require"telescope".extensions.project.project{}<CR>', { desc = '[C]hange [W]workspace' })
     -- vim.keymap.set('n', '<leader>fb', '<Cmd>:Telescope file_browser<CR>', { desc = 'File Browser' })
 
     -- Slightly advanced example of overriding default behavior and theme
