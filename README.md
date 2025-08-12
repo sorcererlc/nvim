@@ -1,3 +1,5 @@
+This repository will no longer be maintained in light of GitHub not being an independent company anymore and it's future induction into Microsoft's CoreAI group. A public mirror is hosted for now at [codeberg.org/sorcererlc/nvim](https://codeberg.org/sorcererlc/nvim).
+
 These are my configuration files for NeoVim. Feel free to use them as a starting point for your own setup.
 Very much work in progress.
 
